@@ -4,6 +4,25 @@
 
 ## Usage
 
+```go
+package filters
+
+import (
+	"github.com/caicloud/nirvana/service"
+	"github.com/zcong1993/nirvana-filter-cors"
+)
+
+// Filters returns a list of filters.
+func Filters() []service.Filter {
+	return []service.Filter{
+		service.RedirectTrailingSlash(),
+		service.FillLeadingSlash(),
+		service.ParseRequestForm(),
+		cors.AllowAll(), // add to your filter list
+	}
+}
+```
+
 ## License
 
 MIT &copy; zcong1993
