@@ -1,9 +1,10 @@
 package cors
 
 import (
+	"net/http"
+
 	"github.com/caicloud/nirvana/service"
 	cors2 "github.com/rs/cors"
-	"net/http"
 )
 
 type corsWrapper struct {
